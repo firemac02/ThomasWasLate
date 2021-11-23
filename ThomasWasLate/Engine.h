@@ -14,6 +14,10 @@ private:
 
 	sf::RenderWindow m_Window;
 
+	sf::View m_MainView;
+	sf::View m_LeftView;
+	sf::View m_RightView;
+
 	sf::View m_BGMainView;
 	sf::View m_BGLeftView;
 	sf::View m_BGRightView;

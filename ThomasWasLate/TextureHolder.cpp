@@ -31,5 +31,5 @@ sf::Texture& TextureHolder::GetTexture(std::string const& filename)
 
         return texture;
     }
-    
+
 }

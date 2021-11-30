@@ -25,8 +25,18 @@ void Engine::input()
 			
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::E))
 			{
-				m_IsSplitScreen = !m_IsSplitScreen;
+				m_SplitScreen = !m_SplitScreen;
 			}
 		}
+	}
+
+	if (m_Thomas.handleInput())
+	{
+
+	}
+
+	if (m_Bob.handeInput())
+	{
+
 	}
 }

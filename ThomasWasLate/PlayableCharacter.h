@@ -38,7 +38,7 @@ private:
 public:
 	void spawn(Vector2f startPosition, float gravity);
 
-	bool virtual handeInput() = 0;
+	bool virtual handleInput() = 0;
 	
 	FloatRect getPosition();
 	FloatRect getFeet();

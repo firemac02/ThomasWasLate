@@ -15,8 +15,25 @@ void Engine::update(float dtAsSeconds)
 	if (m_IsPlaying)
 	{
 		m_Thomas.update(dtAsSeconds);
-
 		m_Bob.update(dtAsSeconds);
+
+		if (detectCollisons(m_Thomas) && detectCollisons(m_Bob))
+		{
+			m_NewLevelRequired = true;
+		}
+		else
+		{
+			detectCollisons(m_Bob);
+		}
+
+		if (m_Bob.getFeet().intersects(m_Thomas.getHead()))
+		{
+			m_Bob.stopFalling(m_Thomas.getHead().top);
+		}
+		else if (m_Thomas.getFeet().intersects(m_Bob.getHead()))
+		{
+			m_Thomas.stopFalling(m_Bob.getHead().top);
+		}
 
 		m_TimeRemaining -= dtAsSeconds;
 

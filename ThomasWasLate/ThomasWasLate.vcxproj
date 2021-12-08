@@ -156,6 +156,7 @@
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="LevelManager.cpp" />
+    <ClCompile Include="loadLevel.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PlayableCharacter.cpp" />
     <ClCompile Include="TextureHolder.cpp" />

@@ -9,6 +9,7 @@ void Engine::update(float dtAsSeconds)
 
 		m_TimeRemaining = 10;
 		m_NewLevelRequired = false;
+		loadLevel();
 	}
 
 	if (m_IsPlaying)

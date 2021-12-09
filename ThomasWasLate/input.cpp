@@ -35,7 +35,7 @@ void Engine::input()
 
 	}
 
-	if (m_Bob.handeInput())
+	if (m_Bob.handleInput())
 	{
 
 	}

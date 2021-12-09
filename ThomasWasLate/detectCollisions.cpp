@@ -18,7 +18,7 @@ bool Engine::detectCollisons(PlayableCharacter& character)
 	if (startX < 0) startX = 0;
 	if (startY < 0) startY = 0;
 	if (endX >= m_LM.getLevelSize().x)
-		endX = m_LM.getCurentLevel().x;
+		endX = m_LM.getLevelSize().x;
 	if (endY >= m_LM.getLevelSize().y)
 		endY = m_LM.getLevelSize().y;
 

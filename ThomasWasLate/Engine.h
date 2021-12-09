@@ -51,7 +51,7 @@ private:
 
 	VertexArray m_VALevel;
 
-	int m_ArrayLevel = NULL;
+	int** m_ArrayLevel = NULL;
 
 	Texture m_TextureFiles;
 

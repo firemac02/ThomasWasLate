@@ -44,11 +44,11 @@ bool Engine::detectCollisons(PlayableCharacter& character)
 
 					if (m_ArrayLevel[y][x] == 2)
 					{
-
+						m_SM.PlayFallInFire();
 					}
 					else
 					{
-
+						m_SM.PlayFallInWater();
 					}
 				}
 			}

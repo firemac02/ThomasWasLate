@@ -61,7 +61,7 @@ int** LevelManager::nextLevel(VertexArray& rVaLevel)
 
 	while (getline(inputFile, s))
 	{
-		+m_LevelSize.y;
+		++m_LevelSize.y;
 	}
 
 	m_LevelSize.x = s.length();

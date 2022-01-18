@@ -7,6 +7,7 @@
 #include "PlayableCharacter.h"
 #include "Thomas.h"
 #include "Bob.h"
+#include "HUD.h"
 
 using namespace sf;
 
@@ -21,6 +22,10 @@ private:
 	LevelManager m_LM;
 
 	SoundManager m_SM;
+
+	Hud m_Hud;
+	int m_FramesSinceLastHUDUpdate = 0;
+	int m_TargetFramesPerHUDUpdate = 500;
 
 	const int TILE_SIZE = 50;
 	const int VERT_IN_QUAD = 4;

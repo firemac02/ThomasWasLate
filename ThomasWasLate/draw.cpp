@@ -29,6 +29,12 @@ void Engine::draw()
 	}
 
 	m_Window.setView(m_HUDView);
+	m_Window.draw(m_Hud.getLevel());
+	m_Window.draw(m_Hud.getTime());
+	if (!m_IsPlaying)
+	{
+		m_Window.draw(m_Hud.getMessage());
+	}
 
 	m_Window.display();
 }

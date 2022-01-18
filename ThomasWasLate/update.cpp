@@ -64,6 +64,22 @@ void Engine::update(float dtAsSeconds)
 		}
 	}
 
+	m_FramesSinceLastHUDUpdate++;
+
+	if (m_FramesSinceLastHUDUpdate > m_TargetFramesPerHUDUpdate)
+	{
+		stringstream ssTime;
+		stringstream ssLevel;
+
+		ssTime << (int)m_TimeRemaining;
+		m_Hud.setTime(ssTime.str());
+
+		ssLevel << "Level: " << m_LM.getCurentLevel();
+		m_Hud.setLevel(ssLevel.str());
+
+		m_FramesSinceLastHUDUpdate = 0;
+	}
+
 	vector<Vector2f>::iterator it;
 
 	for (it = m_FireEmitters.begin(); it != m_FireEmitters.end(); it++)
